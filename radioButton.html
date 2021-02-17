@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio button</title>
+</head>
+<body>
+    <form action="">
+        <input type="radio" name="opcije" id="Radio1" value="1">
+        <label for="Radio1">Opcija 1</label><br>
+
+        <input type="radio" name="opcije" id="Radio2" value="2">
+        <label for="Radio2">Opcija 2</label><br>
+
+        <input type="radio" name="opcije" id="Radio3" value="3">
+        <label for="Radio3">Opcija 3</label><br>
+        <br>
+        <button type="button" onclick="Prikazi()">Prikazi</button>
+    </form>
+    <br>
+    <span id="span1"></span>
+
+    <script>
+        function Prikazi() {
+            var rb1 = document.getElementById("Radio1");
+            var rb2 = document.getElementById("Radio2");
+            var rb3 = document.getElementById("Radio3");
+
+            var span1 = document.getElementById("span1");
+
+            var s = "";
+
+            if (rb1.checked) {
+                s = "Opcija 1<br>";
+            }
+            else if (rb2.checked) {
+                s = "Opcija 2<br>";
+            }
+            else if (rb3.checked) {
+                s = "Opcija 3<br>";
+            }
+            else{
+                s = "Niste odabrali ni jednu opciju";
+            }
+
+            span1.innerHTML = s;
+        }
+    </script>
+</body>
+</html>
