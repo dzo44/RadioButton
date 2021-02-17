@@ -32,20 +32,15 @@
 
             var s = "";
 
-            if (rb1.checked) {
-                s = "Opcija 1<br>";
-            }
-            else if (rb2.checked) {
-                s = "Opcija 2<br>";
-            }
-            else if (rb3.checked) {
-                s = "Opcija 3<br>";
-            }
-            else{
-                s = "Niste odabrali ni jednu opciju";
-            }
+            var listaButtona = document.getElementsByName("opcije");
+            
+           
+           for(let i = 0; i < listaButtona.length; i++)
+           {
+                s += listaButtona[i].id + " " + listaButtona[i].checked + "<br>";
+           };
 
-            span1.innerHTML = s;
+           span1.innerHTML = s;
         }
     </script>
 </body>
